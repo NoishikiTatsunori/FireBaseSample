@@ -1,0 +1,6 @@
+framework module Pods_ModelClass9 {
+  umbrella header "Pods-ModelClass9-umbrella.h"
+
+  export *
+  module * { export * }
+}

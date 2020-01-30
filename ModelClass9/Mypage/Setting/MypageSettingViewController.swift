@@ -20,6 +20,16 @@ class MypageSettingViewController: BaseViewController {
         }
             
     }
+    @IBAction func touchedLogout(_ sender: UIButton) {
+        UserModel.logOut {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    @IBAction func touchedDelete(_ sender: UIButton) {
+        UserModel.delete {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     var myself: UserModel = UserModel()
 }
 

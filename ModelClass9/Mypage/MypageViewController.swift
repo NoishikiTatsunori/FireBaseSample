@@ -33,18 +33,14 @@ extension MypageViewController {
             self.emailLabel.text = myself.mail
             self.passwordLabel.text = myself.password
         }
-        if Auth.auth().currentUser?.uid == nil {
-            let vc = SignUpViewController()
-            navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(true)
+    if Auth.auth().currentUser?.uid == nil {
+        let vc = SignUpViewController()
+        navigationController?.pushViewController(vc, animated: false)
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
 }
 

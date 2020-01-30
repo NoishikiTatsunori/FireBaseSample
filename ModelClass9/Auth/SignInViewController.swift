@@ -19,7 +19,7 @@ class SignInViewController: BaseViewController {
             print(error)
         }) {
             
-            let vc = SignUpViewController()
+            let vc = MypageViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             self.animatorManager.navigationType = .slide_push
             
